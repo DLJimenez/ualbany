@@ -185,11 +185,8 @@ input, textarea, select {
 }
 /*main navigation*/
 #nav {
-	margin: 0 -9999px;
-	padding: 0 9999px;
-	overflow: hidden;
-	width: 954px;
-	background: url(http://www.albany.edu/hpassets/bg-nav.png) repeat-x;
+	display: inline-block;
+	
 }
 #nav li {
 	list-style: none;
@@ -205,13 +202,28 @@ input, textarea, select {
 	border: none;
 }
 #nav a {
-	display: block;
-	color: #ebe6f0;
+	/*display: block;*/
+	
 	height: 58px;
 	overflow: hidden;
 	position: relative;
-	text-indent: -9999px;
+	}
+
+@media (min-width: 976px) {
+	#nav {
+		margin: 0 -9999px;
+	padding: 0 9999px;
+		width: 954px;
+		overflow: hidden;
+	
+	background: url(http://www.albany.edu/hpassets/bg-nav.png) repeat-x;
+	}
+	#nav a {
+		color: #ebe6f0;
+		text-indent: -9999px;
 	background: url(http://www.albany.edu/hpassets/sprites-main-nav.gif) no-repeat;
+		display: block;
+	}
 }
 /*nav items*/
 #nav .about {
@@ -358,14 +370,14 @@ input, textarea, select {
 .main-gallery .mask>ul>li {
 	list-style: none;
 	float: left;
-	width: 963px;
+	/*width: 963px;*/
 }
 .main-gallery .mask>ul>li>img {
 	float: left;
 }
 .main-gallery .text-place {
 	overflow: hidden;
-	width: 481px;
+	/*width: 481px;*/
 	padding: 5px 5px 22px;
 	color: #fff;
 	font-size: 11px;
@@ -382,7 +394,7 @@ input, textarea, select {
 	position: absolute;
 	bottom: 28px;
 	left: 17px;
-	width: 455px;
+	/*width: 455px;*/
 }
 .btn {
 	float: right;
@@ -605,7 +617,7 @@ input, textarea, select {
 .additional-links li {
 	list-style: none;
 	font-size: 12px;
-	line-height: 15px;
+	l0ine-height: 15px;
 	padding: 0 10px 6px 12px;
 	margin: 0 0 5px;
 	border-bottom: 1px dashed #adadad;
@@ -860,4 +872,20 @@ ul.bottomspace li {
 	padding-bottom:1px;
 	background:#D2D2D2;
 	width:210px;
+}
+
+
+/* Media Queries */
+
+
+@media (max-width: 976px) {
+
+	.main-gallery {
+		display: none;
+	}
+
+	.aside {
+		display: none;
+	}
+
 }
